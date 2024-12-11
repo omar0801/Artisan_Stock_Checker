@@ -114,88 +114,98 @@ def mousepad_links(model, hardness):
 # functions for returning each pad's specifics
 # refer to the dictionaries when editing these
 def cs_zero():
-    models = ["13", "14", "12"]
-    hardnesses = [""]
-    sizes = ["1", "2", "3", "4"]
-    colors = ["5"]
-    return [models, hardnesses, sizes, colors]
-
-
-def cs_raiden():
-    models = ["15", "16"]
-    hardnesses = [""]
-    sizes = ["2", "3", "4"]
-    colors = ["8"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_hayate_otsu():
-    models = ["12"]
-    hardnesses = ["0", "1", "2"]
-    sizes = ["2", "3", "4", "5"]
-    colors = ["1", "5"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_hayate_kou():
     models = ["13"]
-    hardnesses = ["0", "1", "2"]
-    sizes = ["2", "3", "4", "5"]
-    colors = ["3"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_hien():
-    models = ["14"]
-    hardnesses = ["0", "1", "2"]
-    sizes = ["1", "2", "3", "4", "5"]
-    colors = ["1", "5"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_zero():
-    models = ["16"]
-    hardnesses = ["0", "1", "2"]
-    sizes = ["1", "2", "3", "4", "5"]
-    colors = ["5", "10"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_raiden():
-    models = ["17"]
-    hardnesses = ["0", "1", "2"]
-    sizes = ["2", "3", "4", "5"]
-    colors = ["8", "10"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_shidenkai():
-    models = ["19"]
-    hardnesses = ["0", "2"]
-    sizes = ["3", "4"]
-    colors = ["6", "10", "11"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_type99():
-    models = ["21"]
-    hardnesses = ["0", "1", "2"]
-    sizes = ["3", "4", "5"]
-    colors = ["5", "12", "13"]
-    return [models, hardnesses, sizes, colors]
-
-
-def fx_key83():
-    models = ["22"]
-    hardnesses = ["0", "1", "2"]
-    sizes = ["2", "3", "4", "5"]
+    hardnesses = [""]
+    sizes = ["1"]
     colors = ["5"]
     return [models, hardnesses, sizes, colors]
+
+
+# def cs_raiden():
+#     models = ["15", "16"]
+#     hardnesses = [""]
+#     sizes = ["2", "3", "4"]
+#     colors = ["8"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_hayate_otsu():
+#     models = ["12"]
+#     hardnesses = ["0", "1", "2"]
+#     sizes = ["2", "3", "4", "5"]
+#     colors = ["1", "5"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_hayate_kou():
+#     models = ["13"]
+#     hardnesses = ["0", "1", "2"]
+#     sizes = ["2", "3", "4", "5"]
+#     colors = ["3"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_hien():
+#     models = ["14"]
+#     hardnesses = ["0", "1", "2"]
+#     sizes = ["1", "2", "3", "4", "5"]
+#     colors = ["1", "5"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_zero():
+#     models = ["16"]
+#     hardnesses = ["0"]
+#     sizes = ["4"]
+#     colors = ["5"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_raiden():
+#     models = ["17"]
+#     hardnesses = ["0", "1", "2"]
+#     sizes = ["2", "3", "4", "5"]
+#     colors = ["8", "10"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_shidenkai():
+#     models = ["19"]
+#     hardnesses = ["0", "2"]
+#     sizes = ["3", "4"]
+#     colors = ["6", "10", "11"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_type99():
+#     models = ["21"]
+#     hardnesses = ["1"]
+#     sizes = ["4"]
+#     colors = ["5"]
+#     return [models, hardnesses, sizes, colors]
+
+
+# def fx_key83():
+#     models = ["22"]
+#     hardnesses = ["0", "1", "2"]
+#     sizes = ["2", "3", "4", "5"]
+#     colors = ["5"]
+#     return [models, hardnesses, sizes, colors]
 
 
 # list of all items to check stock for
 # to skip checking items they can be removed from this list
 def active_functions():
-    function_list = [cs_zero, cs_raiden, fx_hayate_otsu, fx_hayate_kou, fx_hien, fx_zero, fx_raiden, fx_shidenkai,
-                     fx_type99, fx_key83]
+    function_list = [
+                    cs_zero 
+                    # cs_raiden, 
+                    # fx_hayate_otsu, 
+                    # fx_hayate_kou, 
+                    # fx_hien, 
+                    # fx_zero, 
+                    # fx_raiden, 
+                    # fx_shidenkai,
+                    # fx_type99
+                    # fx_key83
+                     ]
     return function_list

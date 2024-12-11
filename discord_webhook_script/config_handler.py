@@ -3,9 +3,12 @@ import time
 import hashlib
 import traceback
 import error_logger
+import os
+from dotenv import load_dotenv
 
 DEFAULT_CONFIG_FILE = "config.cfg"
 
+load_dotenv()
 
 def config_info(config_file=DEFAULT_CONFIG_FILE):
     config = ConfigParser()
@@ -31,34 +34,37 @@ def default_config(config_file=DEFAULT_CONFIG_FILE):
 
     defaults = ConfigParser()
     defaults["stock"] = {
-        "stock_delay": "30",
-        "cart_delay": "30",
-        "batch_delay": "0",
-        "request_fail_delay": "120",
+        "stock_delay": os.getenv("STOCK_DELAY", ""),
+        "cart_delay": os.getenv("CART_DELAY", ""),
+        "batch_delay": os.getenv("BATCH_DELAY", ""),
+        "request_fail_delay": os.getenv("REQUEST_FAIL_DELAY", ""),
     }
 
     defaults["webhook"] = {
-        "fallback_url": "",
-        "S_url": "",
-        "M_url": "",
-        "L_url": "",
-        "XL_url": "",
-        "XXL_url": "",
-        "content": "{Role Ping} In Stock!\\nModel: {Model}, Hardness: {Hardness}, Size: {Size}, Color: {Color}\\nLink: {Link}",
-        "uptime_url": "",
+        "fallback_url": os.getenv("FALLBACK_URL", ""),
+        "S_url": os.getenv("S_URL", ""),
+        "M_url": os.getenv("M_URL", ""),
+        "L_url": os.getenv("L_URL", ""),
+        "XL_url": os.getenv("XL_URL", ""),
+        "XXL_url": os.getenv("XXL_URL", ""),
+        "content": os.getenv(
+            "WEBHOOK_CONTENT",
+            "{Role Ping} In Stock!\\nModel: {Model}, Hardness: {Hardness}, Size: {Size}, Color: {Color}\\nLink: {Link}"
+        ),
+        "uptime_url": os.getenv("UPTIME_URL", ""),
     }
 
     defaults["webhook_role_pings"] = {
-        "role_CS_Zero": "<@&>",
-        "role_CS_Raiden": "<@&>",
-        "role_FX_Hayate_Otsu": "<@&>",
-        "role_FX_Hayate_Kou": "<@&>",
-        "role_FX_Hien": "<@&>",
-        "role_FX_Zero": "<@&>",
-        "role_FX_Raiden": "<@&>",
-        "role_FX_Shidenkai": "<@&>",
-        "role_FX_TYPE99": "<@&>",
-        "role_FX_KEY83": "<@&>",
+        "role_CS_Zero": os.getenv("ROLE_CS_ZERO", "<@&>"),
+        "role_CS_Raiden": os.getenv("ROLE_CS_RAIDEN", "<@&>"),
+        "role_FX_Hayate_Otsu": os.getenv("ROLE_FX_HAYATE_OTSU", "<@&>"),
+        "role_FX_Hayate_Kou": os.getenv("ROLE_FX_HAYATE_KOU", "<@&>"),
+        "role_FX_Hien": os.getenv("ROLE_FX_HIEN", "<@&>"),
+        "role_FX_Zero": os.getenv("ROLE_FX_ZERO", "<@&>"),
+        "role_FX_Raiden": os.getenv("ROLE_FX_RAIDEN", "<@&>"),
+        "role_FX_Shidenkai": os.getenv("ROLE_FX_SHIDENKAI", "<@&>"),
+        "role_FX_TYPE99": os.getenv("ROLE_FX_TYPE99", "<@&>"),
+        "role_FX_KEY83": os.getenv("ROLE_FX_KEY83", "<@&>"),
     }
 
     with open(config_file, "w") as conf:
