@@ -113,12 +113,12 @@ def mousepad_links(model, hardness):
 
 # functions for returning each pad's specifics
 # refer to the dictionaries when editing these
-def cs_zero():
-    models = ["13"]
-    hardnesses = [""]
-    sizes = ["1"]
-    colors = ["5"]
-    return [models, hardnesses, sizes, colors]
+# def cs_zero():
+#     models = ["13"]
+#     hardnesses = [""]
+#     sizes = ["1"]
+#     colors = ["5"]
+#     return [models, hardnesses, sizes, colors]
 
 
 # def cs_raiden():
@@ -153,12 +153,12 @@ def cs_zero():
 #     return [models, hardnesses, sizes, colors]
 
 
-# def fx_zero():
-#     models = ["16"]
-#     hardnesses = ["0"]
-#     sizes = ["4"]
-#     colors = ["5"]
-#     return [models, hardnesses, sizes, colors]
+def fx_zero():
+    models = ["16"]
+    hardnesses = ["0"]
+    sizes = ["4"]
+    colors = ["5"]
+    return [models, hardnesses, sizes, colors]
 
 
 # def fx_raiden():
@@ -177,12 +177,12 @@ def cs_zero():
 #     return [models, hardnesses, sizes, colors]
 
 
-# def fx_type99():
-#     models = ["21"]
-#     hardnesses = ["1"]
-#     sizes = ["4"]
-#     colors = ["5"]
-#     return [models, hardnesses, sizes, colors]
+def fx_type99():
+    models = ["21"]
+    hardnesses = ["1"]
+    sizes = ["4"]
+    colors = ["5"]
+    return [models, hardnesses, sizes, colors]
 
 
 # def fx_key83():
@@ -197,15 +197,15 @@ def cs_zero():
 # to skip checking items they can be removed from this list
 def active_functions():
     function_list = [
-                    cs_zero 
+                    # cs_zero 
                     # cs_raiden, 
                     # fx_hayate_otsu, 
                     # fx_hayate_kou, 
                     # fx_hien, 
-                    # fx_zero, 
+                    fx_zero, 
                     # fx_raiden, 
                     # fx_shidenkai,
-                    # fx_type99
+                    fx_type99
                     # fx_key83
                      ]
     return function_list
